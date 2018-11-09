@@ -1,0 +1,11 @@
+Package: BCBProject
+Type: Package
+Title: The R code for BCB project
+Version: 0.1.0
+Author: Fan Shen
+Maintainer: Fan Shen <van.shen@mail.utoronto.ca>
+Description: The R code for BCB Project. The first function is get the TSS sits
+             from gtf file
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
