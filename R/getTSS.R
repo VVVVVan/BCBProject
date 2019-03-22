@@ -21,12 +21,6 @@
 #' }
 #' @export
 getTSS <- function(fileName, outputFile = "TSS.bed") {
-
-  if (!requireNamespace("BiocManager", quietly = TRUE)) {
-    install.packages("BiocManager")
-    BiocManager::install("rtracklayer", version = "3.8")
-  }
-
   # fileName <- gencode.v19.annotation.gtf"
   gtfFile <- system.file("extdata", fileName, package = "BCBProject")
   gtf <- rtracklayer::import(gtfFile)
