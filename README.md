@@ -8,7 +8,7 @@
 
 ## 1. Description
 BCB430 2018 Fall - 2019 Winter.
-This pacakge is going to analysis the bam files after alignment.
+This pacakge is going to analysis the CLIP data in bam formats after alignment.
 
 Supervisor: Zhaolei Zhang, Hyunmin Lee
 
@@ -145,6 +145,28 @@ Example outcomes:
 ![](./inst/img/ngsOutputTes.avgprof.pdf?sanitize=true "ngs.plot tes")
 
 &nbsp;
+
+## 3 Example
+This is the example code for RNMT iCLIP data that retrieved from SRA and aligned by STAR.
+
+```R
+inputFile <- "../BCBProjectData/SRR4393137.Aligned.sortedByCoord.out.bam"
+
+sampleFiles <- c("../BCBProjectData/SRR4393138.Aligned.sortedByCoord.out.bam",
+"../BCBProjectData/SRR4393139.Aligned.sortedByCoord.out.bam",
+"../BCBProjectData/SRR4393140.Aligned.sortedByCoord.out.bam")
+
+annotaedGenomes <- c("../BCBProjectData/5UTR2000.bed", "../BCBProjectData/3UTR2000.bed",
+"../BCBProjectData/GENCODE.Exon.bed", "../BCBProjectData/GENCODE.Intron.bed",
+"../BCBProjectData/GENCODE.Promoter.bed", "../BCBProjectData/lincRNA.bed",
+"../BCBProjectData/tRNA.bed", "../BCBProjectData/miRNA.bed")
+
+UTRDiffL <- c("../BCBProjectData/3UTR2000.bed","../BCBProjectData/3UTR1000.bed",
+"../BCBProjectData/3UTR500.bed","../BCBProjectData/3UTR200.bed","../BCBProjectData/5UTR2000.bed",
+"../BCBProjectData/5UTR1500.bed","../BCBProjectData/5UTR1000.bed","../BCBProjectData/5UTR500.bed")
+
+main(inputFile, sampleFiles, annotaedGenomes, UTRDiffL) # Other are all defaults
+```
 
 # 4. Get TSS and extend
 
