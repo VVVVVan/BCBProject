@@ -2,12 +2,12 @@
 % Please edit documentation in R/averageProfile.R
 \name{averageProfile}
 \alias{averageProfile}
-\title{averageProfile to get profile from RNMT-enriched targets and not enriched targets.
-Pre-request: download ngs.plot from https://drive.google.com/drive/folders/0B1PVLadG_dCKN1liNFY0MVM1Ulk}
+\title{AverageProfile to get profile from RNMT-enriched targets and not enriched targets.}
 \usage{
 averageProfile(sampleFiles, region = "genebody",
   mergeFile = "merged.bam", mergeNGSFile = "mergedNGS.bam",
-  enrichedFile = "enriched.txt", unenrichedFile = "unenriched.txt")
+  enrichedFile = "enriched.txt", unenrichedFile = "unenriched.txt",
+  configureFile = "configure.txt")
 }
 \arguments{
 \item{sampleFiles}{The samples of alignment files as a list in bam form}
@@ -21,8 +21,16 @@ averageProfile(sampleFiles, region = "genebody",
 \item{enrichedFile}{File name of genes with enriched RNMT}
 
 \item{unenrichedFile}{File name of genes with unenriched RNMT}
+
+\item{configureFile}{File name of configure file for ngs.plot}
+}
+\value{
+string that have following instruction for ngs.plot. Need to run ngs.plot.r in terminal and will result some files start with ngsOutput.
 }
 \description{
+Pre-request: download ngs.plot from https://drive.google.com/drive/folders/0B1PVLadG_dCKN1liNFY0MVM1Ulk
+}
+\details{
 \code{averageProfile} gets profile from RNMT-enriched target (50 counts per million), the aligned region could be tss, tes, genebody, exon, cgi, enhancer, dhs or bed.
 }
 \examples{

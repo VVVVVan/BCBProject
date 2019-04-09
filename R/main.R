@@ -18,6 +18,7 @@
 #'
 #' annotaedGenomes <- c("../BCBProjectData/5UTR2000.bed", "../BCBProjectData/3UTR2000.bed", "../BCBProjectData/GENCODE.Exon.bed", "../BCBProjectData/GENCODE.Intron.bed", "../BCBProjectData/GENCODE.Promoter.bed", "../BCBProjectData/lincRNA.bed", "../BCBProjectData/tRNA.bed", "../BCBProjectData/miRNA.bed")
 #' UTRDiffL <- c("../BCBProjectData/3UTR2000.bed","../BCBProjectData/3UTR1000.bed","../BCBProjectData/3UTR500.bed","../BCBProjectData/3UTR200.bed","../BCBProjectData/5UTR2000.bed","../BCBProjectData/5UTR1500.bed","../BCBProjectData/5UTR1000.bed","../BCBProjectData/5UTR500.bed")
+#' main(inputFile, sampleFiles, annotaedGenomes, UTRDiffL)
 #' }
 #' @export
 #'
@@ -66,8 +67,8 @@ main <- function(inputFile, sampleFiles, annotaedGenomes, UTRDiffL=NULL, version
   genomeCoverage(sampleFiles, annotaedGenomes, UTRDiffL=UTRDiffL, mergeFile=mergeFile)
 
   # 5. Average Profile
-  print("# Please copy below code to terminal to run the ngs.plot")
-  averageProfile(sampleFiles)
+  print(averageProfile(sampleFiles))
+  print("# Please copy above code to terminal to run the ngs.plot")
 }
 
 

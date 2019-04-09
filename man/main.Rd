@@ -32,5 +32,6 @@ sampleFiles <- c("../BCBProjectData/SRR4393138.Aligned.sortedByCoord.out.bam", "
 
 annotaedGenomes <- c("../BCBProjectData/5UTR2000.bed", "../BCBProjectData/3UTR2000.bed", "../BCBProjectData/GENCODE.Exon.bed", "../BCBProjectData/GENCODE.Intron.bed", "../BCBProjectData/GENCODE.Promoter.bed", "../BCBProjectData/lincRNA.bed", "../BCBProjectData/tRNA.bed", "../BCBProjectData/miRNA.bed")
 UTRDiffL <- c("../BCBProjectData/3UTR2000.bed","../BCBProjectData/3UTR1000.bed","../BCBProjectData/3UTR500.bed","../BCBProjectData/3UTR200.bed","../BCBProjectData/5UTR2000.bed","../BCBProjectData/5UTR1500.bed","../BCBProjectData/5UTR1000.bed","../BCBProjectData/5UTR500.bed")
+main(inputFile, sampleFiles, annotaedGenomes, UTRDiffL)
 }
 }
